@@ -1,0 +1,25 @@
+{
+  "year": 2026,
+  "monthly": [
+    { "month": "enero",      "t1": 13420, "t2": 29850, "t3": 47200, "demandMax": 195, "powerFactor": 0.94 },
+    { "month": "febrero",    "t1": 12980, "t2": 28750, "t3": 46300, "demandMax": 192, "powerFactor": 0.93 },
+    { "month": "marzo",      "t1": 14120, "t2": 31200, "t3": 48800, "demandMax": 198, "powerFactor": 0.94 },
+    { "month": "abril",      "t1": 13750, "t2": 30500, "t3": 48100, "demandMax": 196, "powerFactor": 0.94 },
+    { "month": "mayo",       "t1": 14580, "t2": 32100, "t3": 49500, "demandMax": 201, "powerFactor": 0.95 },
+    { "month": "junio",      "t1": 15200, "t2": 33500, "t3": 50800, "demandMax": 205, "powerFactor": 0.95 },
+    { "month": "julio",      "t1": 15600, "t2": 34200, "t3": 51500, "demandMax": 208, "powerFactor": 0.95 },
+    { "month": "agosto",     "t1": 15450, "t2": 33800, "t3": 51100, "demandMax": 207, "powerFactor": 0.95 },
+    { "month": "septiembre", "t1": 14820, "t2": 32600, "t3": 50200, "demandMax": 204, "powerFactor": 0.94 },
+    { "month": "octubre",    "t1": 14200, "t2": 31400, "t3": 49000, "demandMax": 200, "powerFactor": 0.94 },
+    { "month": "noviembre",  "t1": 13650, "t2": 30100, "t3": 47800, "demandMax": 197, "powerFactor": 0.94 },
+    { "month": "diciembre",  "t1": 13180, "t2": 29200, "t3": 47000, "demandMax": 194, "powerFactor": 0.93 }
+  ],
+  "daily": [],
+  "meta": {
+    "currency": "USD",
+    "unit": "kWh",
+    "demandUnit": "kW",
+    "lastUpdated": "2026-07-13T00:00:00.000Z",
+    "source": "seed-fallback"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "Ingeniería Nescor Dashboard",
+  "short_name": "Nescor",
+  "description": "Dashboard de KPIs de Ingeniería Nescor — OT Críticas, Planificadas, Horas Técnicas, Consumo de Energía y más.",
+  "start_url": ".",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f1320",
+  "theme_color": "#5b8cff",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "KPIs de Ingeniería",
+      "url": "./?module=kpi-ingenieria",
+      "icons": [
+        {
+          "src": "/dashboard/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Consumo de Energía",
+      "url": "./?module=consumo-energia",
+      "icons": [
+        {
+          "src": "/dashboard/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}
