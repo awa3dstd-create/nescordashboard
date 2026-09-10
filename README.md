@@ -9,7 +9,7 @@ Espejo estático (Espejo 3) del dashboard de KPIs de Ingeniería Nescor.
 
 Los 4 accesos comparten la MISMA base de datos (KV) y la misma sesión: un
 usuario puede entrar por cualquiera de ellos. Si un servidor se satura, el
-propio HTML rota automáticamente al siguiente (failover integrado, v2.17.0).
+propio HTML rota automáticamente al siguiente (failover integrado, v2.17.1).
 
 ## Actualizar este espejo tras un nuevo deploy de producción
 

@@ -11603,10 +11603,19 @@ function mergeWeekRowsForChart(weekFiltered, isHoras) {
         target.horasTecnicas   = hoursToTimeStr(ht1 + ht2);
         target.horasAusencias  = hoursToTimeStr(ha1 + ha2);
         target.horasVacaciones = hoursToTimeStr(hv1 + hv2);
-        // Recalcular pctCHT = horasTecnicas / fondoTiempo
+        // Recalcular pctCHT con la fórmula CANÓNICA (idéntica a computeHorasFormulas
+        // y a recalcHorasMonthAndYTD): ht / (fondo − ausencias − vacaciones).
+        // FIX v2.17.1: antes era ht/fondo — ignoraba ausencias/vacaciones y daba un
+        // % erróneo al unir semanas partidas (14, 18, 27, 36, 40, 49) con ausencias.
         const totalFondo = ft1 + ft2;
         const totalHT    = ht1 + ht2;
-        target.pctCHT = (totalFondo > 0) ? (totalHT / totalFondo) : null;
+        const totalHa    = ha1 + ha2;
+        const totalHv    = hv1 + hv2;
+        const denomM     = totalFondo - totalHa - totalHv;
+        let pctMerged    = null;
+        if (totalFondo > 0 && denomM > 0) pctMerged = totalHT / denomM;
+        else if (totalFondo > 0 && denomM <= 0) pctMerged = 0;
+        target.pctCHT = pctMerged;
       } else {
         // OT Críticas / Planificadas: sumar volúmenes, recalcular %
         target.otPlanificadas = (Number(target.otPlanificadas) || 0) + (Number(row.otPlanificadas) || 0);
@@ -18931,7 +18940,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Si al recargar ves un timestamp distinto al de abajo, el navegador cargó la nueva versión.
 // Si ves el mismo timestamp viejo, el navegador está sirviendo caché.
 (function stampVersion() {
-  const VER = '2.17.0';
+  const VER = '2.17.1';
   const BUILD = new Date().toISOString();
   console.log(
     '%c Dashboard KPI %c v' + VER + ' %c build ' + BUILD,
